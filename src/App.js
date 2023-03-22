@@ -1,28 +1,12 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false)
-  const [tasks, setTasks] = useState([
-    {
-        id: 1,
-        text: 'Doctors appointment',
-        reminder: true,
-    },
-    {
-        id: 2,
-        text: 'Meeting at school',
-        reminder: true,
-    },
-    {
-        id: 3,
-        text: 'Food shopping',
-        reminder: false,
-    },
-]);
+  const [tasks, setTasks] = useState([]);
 
 // Add Task
 const addTask = (task) => {
